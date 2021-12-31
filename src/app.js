@@ -8,7 +8,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-
+//MIDDLEWARE
+// get the request method and the time of this request
 function routeRequestsTime(request, response, next) {
   const { method, url } = request;
   const requestMethod = `[${method.toUpperCase()}] ${url}`
